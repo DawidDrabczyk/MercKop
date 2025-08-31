@@ -23,6 +23,22 @@ body {
   z-index: -1;
 }
 
+.top {
+  position: relative;
+  height: 200px;
+  background-size: cover;
+  z-index: 0;
+}
+
+.top-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-transform: uppercase;
+  font-size: 3.6rem;
+}
+
 nav {
   font-size: 2rem;
   text-transform: uppercase;
@@ -81,7 +97,7 @@ header {
 .second_sec {
   position: relative;
   height: 350px;
-  background-image: url("../img/inne5.jpg");
+  background-image: url("../img/aboutus4.jpg");
   background-size: cover;
   background-position: center 70%;
   z-index: 0;
@@ -120,9 +136,179 @@ footer {
   }
 }
 
+.img_about {
+  width: 100%;
+}
+
+.aboutus {
+  background-image: url("../img/aboutus1.jpg");
+  background-position: center;
+}
+
+.aboutus_info {
+  background-color: rgb(248, 248, 248);
+}
+
+.aboutus_info .container {
+  padding: 2em 0.5em;
+}
+
+.aboutus_text {
+  padding: 1.8rem;
+}
+
+.aboutus_text h3 {
+  margin-bottom: 0.5em;
+  font-size: 2.6rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: underline #ff8000;
+}
+
+.aboutus_right {
+  text-align: right;
+}
+
+.aboutus_img {
+  object-fit: cover;
+  height: 300px;
+}
+
+.offers {
+  background-image: url("../img/offers1.jpg");
+  background-position: center;
+}
+
+.service_box {
+  position: relative;
+  background-size: cover;
+  height: 300px;
+  z-index: 0;
+}
+
+.service_box p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: white;
+}
+
+.service_box.box_one {
+  background-image: url("../img/offers3.jpg");
+  background-position: center;
+}
+
+.service_box.box_two {
+  background-image: url("../img/offers5.jpg");
+  background-position: center;
+}
+
+.service_box.box_three {
+  background-image: url("../img/offers2.jpg");
+  background-position: bottom;
+}
+
+.service_box.box_four {
+  background-image: url("../img/offers4.jpg");
+  background-position: center;
+}
+
+.projects_hero {
+  background-image: url("../img/projects1.jpg");
+  background-position: center;
+}
+
+.projects img {
+  height: 240px;
+  object-fit: cover;
+}
+
+.projects .btn {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+}
+
+#imageModal img {
+  max-width: 100vw;
+  max-height: 100vh;
+  object-fit: contain;
+}
+
+.card {
+  height: 500px;
+}
+
+.show-bottom {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+.contact {
+  background-image: url("../img/offers2.jpg");
+  background-position: center 65%;
+}
+
+.contact_info h2 {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 2.6rem;
+}
+
+.contact_map iframe {
+  width: 100%;
+  min-height: 400px;
+}
+
 @media (min-width: 992px) {
   .logo {
     width: 150px;
+  }
+
+  .img_about {
+    width: 550px;
+  }
+
+  .aboutus_info .container {
+    padding: 0;
+  }
+
+  .aboutus_shadow {
+    box-shadow: inset 0 5px 10px -5px rgba(0, 0, 0, 0.4);
+  }
+
+  .aboutus_text {
+    padding: 5em 0;
+    transform: skew(-15deg);
+  }
+
+  .aboutus_left {
+    padding-right: 2em;
+    text-align: right;
+  }
+
+  .aboutus_right {
+    padding-left: 2em;
+    text-align: left;
+  }
+
+  .aboutus_img {
+    height: auto;
+    max-height: 350px;
+    transform: skew(-15deg);
+  }
+
+  .aboutus_bottom_sec i {
+    font-size: 3rem;
+  }
+
+  .aboutus_bottom_sec h3 {
+    font-size: 2.2rem;
+    font-weight: bold;
   }
 }
 

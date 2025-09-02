@@ -264,6 +264,10 @@ footer {
   min-height: 400px;
 }
 
+.fa-facebook {
+  font-size: 3rem;
+}
+
 @media (min-width: 992px) {
   .logo {
     width: 150px;

@@ -13,6 +13,16 @@ body {
   font-size: 1.6rem;
 }
 
+h1,
+.shadow-txt {
+  text-shadow: 0px 0px 15px black;
+}
+
+h1 {
+  text-shadow: 0px 0px 15px black;
+  letter-spacing: 2px;
+}
+
 .shadow {
   position: absolute;
   top: 0;
@@ -239,6 +249,11 @@ footer {
 
 .card {
   height: 500px;
+  border-radius: 25px;
+}
+
+.card img {
+  border-radius: 25px 25px 0 0;
 }
 
 .show-bottom {

@@ -76,15 +76,15 @@ header {
 }
 
 .carousel-img-one {
-  background-image: url("../img/carousel1.jpg");
+  background-image: url("../img/carousel1.webp");
 }
 
 .carousel-img-two {
-  background-image: url("../img/carousel2.jpg");
+  background-image: url("../img/carousel2.webp");
 }
 
 .carousel-img-three {
-  background-image: url("../img/carousel3.jpg");
+  background-image: url("../img/carousel3.webp");
 }
 
 .home_boxes {
@@ -107,7 +107,7 @@ header {
 .second_sec {
   position: relative;
   height: 350px;
-  background-image: url("../img/aboutus4.jpg");
+  background-image: url("../img/aboutus4.webp");
   background-size: cover;
   background-position: center 70%;
   z-index: 0;
@@ -151,7 +151,7 @@ footer {
 }
 
 .aboutus {
-  background-image: url("../img/aboutus1.jpg");
+  background-image: url("../img/aboutus1.webp");
   background-position: center;
 }
 
@@ -252,7 +252,8 @@ footer {
   border-radius: 25px;
 }
 
-.card img {
+.card picture img {
+  width: 100%;
   border-radius: 25px 25px 0 0;
 }
 
@@ -290,6 +291,11 @@ footer {
 
   .img_about {
     width: 550px;
+  }
+
+  .big-btn {
+    width: 200px;
+    font-size: 1.5rem;
   }
 
   .aboutus_info .container {

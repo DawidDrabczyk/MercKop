@@ -49,6 +49,26 @@
       defer
     ></script>
     <meta name="theme-color" content="#0d6efd" />
+    <link
+      href="img/favicons/favicon-32.png"
+      rel="icon"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link
+      href="img/favicons/favicon-180.png"
+      rel="apple-touch-icon"
+      sizes="180x180"
+    />
+    <link href="site.webmanifest" rel="manifest" />
+    <meta
+      content="MERC-KOP – O nas | Roboty ziemne, wykopy, niwelacje"
+      name="twitter:title"
+    />
+    <meta
+      content="https://merckop.pl/img/og-default.png"
+      name="twitter:image"
+    />
   </head>
   <body class="bg-white">
     <a
@@ -68,11 +88,14 @@
           href="index.html"
           aria-label="MERC-KOP - strona główna"
         >
-          <img
-            class="logo"
-            src="./img/logo.png"
-            alt="Logo MERC-KOP – Roboty Ziemne"
-          />
+          <picture
+            ><source srcset="img/logo.webp" type="image/webp" />
+            <img
+              alt="Logo MERC-KOP – Roboty Ziemne"
+              class="logo"
+              loading="lazy"
+              src="./img/logo.png"
+          /></picture>
         </a>
         <button
           class="navbar-toggler"
@@ -90,10 +113,10 @@
           id="navbarNavAltMarkup"
         >
           <div class="navbar-nav ms-auto align-items-lg-center">
-            <a class="nav-link px-lg-3" href="index.html" aria-current="page"
-              >Strona główna</a
+            <a class="nav-link px-lg-3" href="index.html">Strona główna</a>
+            <a class="nav-link px-lg-3 active" href="#" aria-current="page"
+              >O nas</a
             >
-            <a class="nav-link px-lg-3 active" href="#">O nas</a>
             <a class="nav-link px-lg-3" href="offer.html">Oferta</a>
             <a class="nav-link px-lg-3" href="projects.html">Realizacje</a>
             <a class="nav-link px-lg-3" href="contact.html">Kontakt</a>
@@ -124,15 +147,17 @@
         <div class="container">
           <div class="row align-items-center g-4">
             <div class="col-lg-5">
-              <img
-                class="img_about ms-2 align-text-bottom img-fluid rounded"
-                src="./img/aboutus3.jpg"
-                width="800"
-                height="533"
-                alt="Koparka MERC-KOP podczas wykopu pod fundamenty"
-                loading="lazy"
-                decoding="async"
-              />
+              <picture
+                ><source srcset="img/aboutus3.webp" type="image/webp" />
+                <img
+                  alt="Koparka MERC-KOP podczas wykopu pod fundamenty"
+                  class="img_about ms-2 align-text-bottom img-fluid rounded"
+                  decoding="async"
+                  height="533"
+                  loading="lazy"
+                  src="./img/aboutus3.jpg"
+                  width="800"
+              /></picture>
             </div>
             <div class="col-lg-7">
               <h2 id="kim-jestesmy" class="h3">Kim jesteśmy</h2>
@@ -384,16 +409,19 @@
               href="https://www.facebook.com/p/Merc-Kop-Roboty-ziemne-61571967362767/"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Link do mediów społecznościowych facebook"
               ><i class="fa-brands fa-facebook"></i
             ></a>
           </span>
         </strong>
-        <img
-          class="logo ms-2 align-text-bottom"
-          src="./img/logo.png"
-          alt="Logo MERC-KOP"
-          loading="lazy"
-        />
+        <picture
+          ><source srcset="img/logo.webp" type="image/webp" />
+          <img
+            alt="Logo MERC-KOP – Roboty Ziemne"
+            class="logo ms-2 align-text-bottom"
+            loading="lazy"
+            src="./img/logo.png"
+        /></picture>
       </p>
     </footer>
 

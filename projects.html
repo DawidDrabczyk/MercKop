@@ -49,6 +49,26 @@
       defer
     ></script>
     <meta name="theme-color" content="#0d6efd" />
+    <link
+      href="img/favicons/favicon-32.png"
+      rel="icon"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link
+      href="img/favicons/favicon-180.png"
+      rel="apple-touch-icon"
+      sizes="180x180"
+    />
+    <link href="site.webmanifest" rel="manifest" />
+    <meta
+      content="MERC-KOP – Realizacje | Roboty ziemne, wykopy, niwelacje"
+      name="twitter:title"
+    />
+    <meta
+      content="https://merckop.pl/img/og-default.png"
+      name="twitter:image"
+    />
   </head>
   <body class="bg-white">
     <a
@@ -68,11 +88,14 @@
           href="index.html"
           aria-label="MERC-KOP - strona główna"
         >
-          <img
-            class="logo"
-            src="./img/logo.png"
-            alt="Logo MERC-KOP – Roboty Ziemne"
-          />
+          <picture
+            ><source srcset="img/logo.webp" type="image/webp" />
+            <img
+              alt="Logo MERC-KOP – Roboty Ziemne"
+              class="logo"
+              loading="lazy"
+              src="./img/logo.png"
+          /></picture>
         </a>
         <button
           class="navbar-toggler"
@@ -90,12 +113,12 @@
           id="navbarNavAltMarkup"
         >
           <div class="navbar-nav ms-auto align-items-lg-center">
-            <a class="nav-link px-lg-3" href="index.html" aria-current="page"
-              >Strona główna</a
-            >
+            <a class="nav-link px-lg-3" href="index.html">Strona główna</a>
             <a class="nav-link px-lg-3" href="aboutus.html">O nas</a>
             <a class="nav-link px-lg-3" href="offer.html">Oferta</a>
-            <a class="nav-link px-lg-3 active" href="#">Realizacje</a>
+            <a class="nav-link px-lg-3 active" href="#" aria-current="page"
+              >Realizacje</a
+            >
             <a class="nav-link px-lg-3" href="contact.html">Kontakt</a>
             <a
               class="btn btn-warning ms-lg-3 mt-3 mt-lg-0 d-lg-none"
@@ -133,7 +156,13 @@
           <div class="row">
             <div class="col-md-6 col-lg-4">
               <div class="card mb-3">
-                <img src="./img/aboutus1.jpg" alt="Pierwsza realizacja" />
+                <picture
+                  ><source srcset="img/aboutus1.webp" type="image/webp" />
+                  <img
+                    alt="Pierwsza realizacja"
+                    loading="lazy"
+                    src="./img/aboutus1.jpg"
+                /></picture>
                 <div
                   class="card-body d-flex flex-column justify-content-between pb-3"
                 >
@@ -156,7 +185,13 @@
 
             <div class="col-md-6 col-lg-4">
               <div class="card mb-3">
-                <img src="./img/aboutus2.jpg" alt="Druga realizacja" />
+                <picture
+                  ><source srcset="img/aboutus2.webp" type="image/webp" />
+                  <img
+                    alt="Druga realizacja"
+                    loading="lazy"
+                    src="./img/aboutus2.jpg"
+                /></picture>
                 <div
                   class="card-body d-flex flex-column justify-content-between pb-3"
                 >
@@ -179,7 +214,13 @@
 
             <div class="col-md-6 col-lg-4">
               <div class="card mb-3">
-                <img src="./img/projects6.jpg" alt="Trzecia realizacja" />
+                <picture
+                  ><source srcset="img/projects6.webp" type="image/webp" />
+                  <img
+                    alt="Trzecia realizacja"
+                    loading="lazy"
+                    src="./img/projects6.jpg"
+                /></picture>
                 <div
                   class="card-body d-flex flex-column justify-content-between pb-3"
                 >
@@ -201,7 +242,13 @@
 
             <div class="col-md-6 col-lg-4">
               <div class="card mb-3">
-                <img src="./img/carousel1.jpg" alt="Czwarta realizacja" />
+                <picture
+                  ><source srcset="img/carousel1.webp" type="image/webp" />
+                  <img
+                    alt="Czwarta realizacja"
+                    loading="lazy"
+                    src="./img/carousel1.jpg"
+                /></picture>
                 <div
                   class="card-body d-flex flex-column justify-content-between pb-3"
                 >
@@ -223,11 +270,14 @@
 
             <div class="col-md-6 col-lg-4">
               <div class="card mb-3">
-                <img
-                  src="./img/carousel3.jpg"
-                  alt="Piąta realizacja"
-                  class="show-bottom"
-                />
+                <picture
+                  ><source srcset="img/carousel3.webp" type="image/webp" />
+                  <img
+                    alt="Piąta realizacja"
+                    class="show-bottom"
+                    loading="lazy"
+                    src="./img/carousel3.jpg"
+                /></picture>
                 <div
                   class="card-body d-flex flex-column justify-content-between pb-3"
                 >
@@ -250,7 +300,13 @@
 
             <div class="col-md-6 col-lg-4">
               <div class="card mb-3">
-                <img src="./img/projects2.jpg" alt="Szósta realizacja" />
+                <picture
+                  ><source srcset="img/projects2.webp" type="image/webp" />
+                  <img
+                    alt="Szósta realizacja"
+                    loading="lazy"
+                    src="./img/projects2.jpg"
+                /></picture>
                 <div
                   class="card-body d-flex flex-column justify-content-between pb-3"
                 >
@@ -273,7 +329,13 @@
 
             <div class="col-md-6 col-lg-4">
               <div class="card mb-3">
-                <img src="./img/projects3.jpg" alt="Siódma realizacja" />
+                <picture
+                  ><source srcset="img/projects3.webp" type="image/webp" />
+                  <img
+                    alt="Siódma realizacja"
+                    loading="lazy"
+                    src="./img/projects3.jpg"
+                /></picture>
                 <div
                   class="card-body d-flex flex-column justify-content-between pb-3"
                 >
@@ -295,7 +357,13 @@
 
             <div class="col-md-6 col-lg-4">
               <div class="card mb-3">
-                <img src="./img/projects4.jpg" alt="Ósma realizacja" />
+                <picture
+                  ><source srcset="img/projects4.webp" type="image/webp" />
+                  <img
+                    alt="Ósma realizacja"
+                    loading="lazy"
+                    src="./img/projects4.jpg"
+                /></picture>
                 <div
                   class="card-body d-flex flex-column justify-content-between pb-3"
                 >
@@ -317,7 +385,13 @@
 
             <div class="col-md-6 col-lg-4">
               <div class="card mb-3">
-                <img src="./img/projects5.jpg" alt="Dziewiąta realizacja" />
+                <picture
+                  ><source srcset="img/projects5.webp" type="image/webp" />
+                  <img
+                    alt="Dziewiąta realizacja"
+                    loading="lazy"
+                    src="./img/projects5.jpg"
+                /></picture>
                 <div
                   class="card-body d-flex flex-column justify-content-between pb-3"
                 >
@@ -353,16 +427,19 @@
               href="https://www.facebook.com/p/Merc-Kop-Roboty-ziemne-61571967362767/"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Link do mediów społecznościowych facebook"
               ><i class="fa-brands fa-facebook"></i
             ></a>
           </span>
         </strong>
-        <img
-          class="logo ms-2 align-text-bottom"
-          src="./img/logo.png"
-          alt="Logo MERC-KOP"
-          loading="lazy"
-        />
+        <picture
+          ><source srcset="img/logo.webp" type="image/webp" />
+          <img
+            alt="Logo MERC-KOP – Roboty Ziemne"
+            class="logo ms-2 align-text-bottom"
+            loading="lazy"
+            src="./img/logo.png"
+        /></picture>
       </p>
     </footer>
 
@@ -375,7 +452,12 @@
             class="modal-body bg-black d-flex justify-content-center align-items-center p-0 min-vh-100"
             role="button"
           >
-            <img id="modalImage" src="" alt="Realizacja MERC-KOP" />
+            <img
+              id="modalImage"
+              src=""
+              alt="Realizacja MERC-KOP"
+              loading="lazy"
+            />
           </div>
           <button
             type="button"

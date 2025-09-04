@@ -56,6 +56,27 @@
       crossorigin="anonymous"
       defer
     ></script>
+    <link href="https://merckop.pl" rel="canonical" />
+    <link
+      href="img/favicons/favicon-32.png"
+      rel="icon"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link
+      href="img/favicons/favicon-180.png"
+      rel="apple-touch-icon"
+      sizes="180x180"
+    />
+    <link href="site.webmanifest" rel="manifest" />
+    <link
+      rel="preload"
+      as="image"
+      href="/img/carousel1.webp"
+      imagesrcset="/img/carousel1.webp 1200w"
+      imagesizes="100vw"
+      fetchpriority="high"
+    />
   </head>
   <body class="bg-white">
     <!-- Nawigacja -->
@@ -69,11 +90,14 @@
           href="#"
           aria-label="MERC-KOP - strona główna"
         >
-          <img
-            class="logo"
-            src="./img/logo.png"
-            alt="Logo MERC-KOP – Roboty Ziemne"
-          />
+          <picture
+            ><source srcset="img/logo.webp" type="image/webp" />
+            <img
+              alt="Logo MERC-KOP – Roboty Ziemne"
+              class="logo"
+              loading="lazy"
+              src="./img/logo.png"
+          /></picture>
         </a>
         <button
           class="navbar-toggler"
@@ -154,10 +178,10 @@
                 Wykopy, niwelacje, przygotowanie pod inwestycje
               </p>
               <div class="mt-3">
-                <a class="btn btn-warning me-2" href="offer.html"
+                <a class="btn btn-warning me-2 big-btn" href="offer.html"
                   >Zobacz ofertę</a
                 >
-                <a class="btn btn-outline-light" href="contact.html"
+                <a class="btn btn-outline-light big-btn" href="contact.html"
                   >Bezpłatna wycena</a
                 >
               </div>
@@ -176,7 +200,7 @@
                 Terminowo, bezpiecznie i zgodnie z projektem
               </p>
               <div class="mt-3">
-                <a class="btn btn-primary" href="projects.html"
+                <a class="btn btn-primary big-btn" href="projects.html"
                   >Zobacz realizacje</a
                 >
               </div>
@@ -195,7 +219,7 @@
                 Elastyczne stawki i szybkie terminy – zapytaj o dostępność
               </p>
               <div class="mt-3">
-                <a class="btn btn-primary" href="contact.html"
+                <a class="btn btn-primary big-btn" href="contact.html"
                   >Skontaktuj się</a
                 >
               </div>
@@ -230,7 +254,7 @@
           <div class="row">
             <div class="col-md-4 home_box mb-5 mb-md-0">
               <i class="fas fa-tools mb-4" aria-hidden="true"></i>
-              <h3>Kompleksowe usługi</h3>
+              <h2>Kompleksowe usługi</h2>
               <p class="m-0">
                 Od przygotowania terenu, przez wykopy i niwelację, po
                 uporządkowanie placu budowy.
@@ -239,7 +263,7 @@
 
             <div class="col-md-4 home_box mb-5 mb-md-0">
               <i class="fas fa-shield-alt mb-4" aria-hidden="true"></i>
-              <h3>Bezpieczeństwo i terminowość</h3>
+              <h2>Bezpieczeństwo i terminowość</h2>
               <p class="m-0">
                 Pracujemy zgodnie z BHP i harmonogramem – bez niespodzianek po
                 drodze.
@@ -248,7 +272,7 @@
 
             <div class="col-md-4 home_box mb-5 mb-md-0">
               <i class="fas fa-cogs mb-4" aria-hidden="true"></i>
-              <h3>Nowoczesny park maszyn</h3>
+              <h2>Nowoczesny park maszyn</h2>
               <p class="m-0">
                 Sprawny i regularnie serwisowany sprzęt zapewnia najwyższą
                 jakość usług.
@@ -289,14 +313,16 @@
             </div>
 
             <div class="col-md-6">
-              <img
-                src="./img/koparka.png"
-                alt="Koparka MERC-KOP podczas prac ziemnych"
-                class="img-fluid rounded"
-                loading="lazy"
-                width="800"
-                height="533"
-              />
+              <picture
+                ><source srcset="img/koparka.webp" type="image/webp" />
+                <img
+                  alt="Koparka MERC-KOP podczas prac ziemnych"
+                  class="img-fluid rounded"
+                  loading="lazy"
+                  width="800"
+                  height="533"
+                  src="./img/koparka.png"
+              /></picture>
             </div>
           </div>
         </div>
@@ -314,16 +340,20 @@
               href="https://www.facebook.com/p/Merc-Kop-Roboty-ziemne-61571967362767/"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Link do mediów społecznościowych facebook"
               ><i class="fa-brands fa-facebook"></i
             ></a>
           </span>
         </strong>
-        <img
-          class="logo ms-2 align-text-bottom"
-          src="./img/logo.png"
-          alt="Logo MERC-KOP"
-          loading="lazy"
-        />
+
+        <picture
+          ><source srcset="img/logo.webp" type="image/webp" />
+          <img
+            alt="Logo MERC-KOP – Roboty Ziemne"
+            class="logo ms-2 align-text-bottom"
+            loading="lazy"
+            src="./img/logo.png"
+        /></picture>
       </p>
     </footer>
 

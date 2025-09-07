@@ -290,7 +290,7 @@ footer {
 
 .review-box {
   position: relative;
-  margin: 2em;
+  margin: 0 2em 1em 2em;
   padding: 2em;
   border-radius: 10px;
   box-shadow: 3px 3px 10px #2e2e2e2e;

@@ -1,0 +1,171 @@
+# PLAN ULEPSZEŃ DLA STRONY MERC-KOP - POZOSTAŁE ZADANIA
+================================================================================
+
+## PODSUMOWANIE
+
+Większość zaplanowanych ulepszeń została wdrożona. Poniżej znajdują się
+TYLKO zadania, które wymagają jeszcze ręcznej interwencji lub konfiguracji
+zewnętrznych serwisów.
+
+================================================================================
+
+## 1. OPTYMALIZACJA OBRAZÓW (KRYTYCZNE - WYMAGA RĘCZNEJ PRACY)
+================================================================================
+
+PROBLEM: Strona ładuje się wolno przez ogromne pliki graficzne.
+
+PLIKI DO OPTYMALIZACJI:
+
+| Plik                    | Obecny rozmiar | Docelowy rozmiar | Akcja                                 |
+|-------------------------|----------------|------------------|---------------------------------------|
+| img/koparka.png         | 2.5MB          | <80KB           | Zmniejsz do 1200px, WebP 80%          |
+| img/logo.png            | 1.5MB          | <30KB           | Zmniejsz do 300px, PNG-8 lub WebP     |
+| img/carousel1-3.webp    | 200-400KB      | <100KB          | Rekompresja WebP 75%                  |
+| img/aboutus1-4.jpg      | 300-600KB      | <120KB          | Zmniejsz + WebP                       |
+| img/projects1-6.jpg     | 200-400KB      | <100KB          | WebP 80%                              |
+
+NARZĘDZIA:
+- Squoosh.app - online, za darmo (ZALECANE)
+- TinyPNG - online
+
+KROK PO KROKU:
+1. Otwórz Squoosh.app w przeglądarce
+2. Przeciągnij obraz (np. koparka.png)
+3. Po prawej wybierz WebP, Quality 80%
+4. Zmień rozmiar: Resize → 1200px width (lub mniejszy dla logo)
+5. Porównaj (Original vs Compressed)
+6. Pobierz zoptymalizowany plik
+7. Zachowaj starą wersję jako backup
+8. Podmień plik w katalogu img/
+
+PRZEWIDYWANY EFEKT:
+- Całkowity rozmiar strony: z 5MB → <600KB (80%+ poprawa!)
+- Czas ładowania: z 8-12s → <2s
+- PageSpeed Score: z ~40 → 90+
+
+================================================================================
+
+## 2. KONFIGURACJA FORMSPREE (WYMAGA REJESTRACJI)
+================================================================================
+
+Formularze są już dodane do stron z obsługą AJAX (komunikaty sukcesu/błędu),
+ale używają placeholdera "YOUR_ID" / "YOUR_CALLBACK_ID".
+Trzeba zarejestrować konto i podmienić ID.
+
+KROKI:
+1. Wejdź na https://formspree.io/ i załóż darmowe konto
+2. Utwórz nowy formularz (endpoint)
+3. Skopiuj ID formularza (np. "xrgvabcd")
+4. Zamień "YOUR_ID" w następujących plikach:
+   - contact.html (id="contactForm")
+   - contact.html (mobile quick form)
+   - index.html (quick form)
+5. Dla widgetu "Oddzwonimy" zamień "YOUR_CALLBACK_ID":
+   - contact.html (id="callbackForm")
+   - offer.html (id="callbackForm")
+6. Przetestuj wysyłanie formularzy
+7. Sprawdź czy maile dochodzą na merckopzory@gmail.com
+
+DARMOWY LIMIT: 50 zgłoszeń/miesiąc
+
+================================================================================
+
+## 3. KONFIGURACJA GOOGLE TAG MANAGER + ANALYTICS
+================================================================================
+
+Kod GTM jest już dodany do wszystkich stron, ale używa placeholdera "GTM-XXXXXXX".
+
+KROKI:
+1. Utwórz konto Google Analytics 4 (analytics.google.com)
+2. Utwórz konto Google Tag Manager (tagmanager.google.com)
+3. Skopiuj ID kontenera GTM (np. "GTM-ABC123")
+4. Zamień "GTM-XXXXXXX" we WSZYSTKICH plikach HTML:
+   - index.html
+   - aboutus.html
+   - offer.html
+   - projects.html
+   - contact.html
+   - faq.html
+5. W GTM dodaj tag GA4 Configuration z Twoim Measurement ID
+6. Skonfiguruj eventy (triggers):
+   - Kliknięcia w numery telefonu (tel: links)
+   - Wysłanie formularzy
+   - Kliknięcia w CTA ("Bezpłatna wycena", "Zobacz ofertę")
+   - Scroll depth (25%, 50%, 75%, 100%)
+7. Opublikuj kontener
+8. Przetestuj w Real-Time GA4
+
+================================================================================
+
+## 4. TESTY KOŃCOWE
+================================================================================
+
+Po wdrożeniu powyższych zmian, wykonaj testy:
+
+[ ] PageSpeed Desktop: cel 90+
+    https://pagespeed.web.dev/?url=https://merckop.pl
+[ ] PageSpeed Mobile: cel 80+
+[ ] Formularze - test wysyłania (contact, index, callback)
+[ ] GA4 - sprawdź Real-Time czy zbiera dane
+[ ] Mobile - przejrzyj stronę na telefonie
+[ ] Wszystkie linki działają (nawigacja, stopka, CTA)
+[ ] WhatsApp - otwiera rozmowę z poprawnym numerem
+[ ] Mapa Google - ładuje się po kliknięciu
+
+================================================================================
+
+## CO ZOSTAŁO JUŻ WDROŻONE (podsumowanie)
+================================================================================
+
+- Formularze kontaktowe (contact.html, index.html) + widget "Oddzwonimy"
+- Ujednolicone numery telefonu (główny + komórkowy)
+- Przycisk CTA widoczny na desktop
+- Floating CTA button na wszystkich stronach
+- WhatsApp integracja
+- Sekcja statystyk (150+ klientów, 200+ projektów, 3+ lat, 98%)
+- Opinie z datami i gwiazdkami
+- Rozbudowana stopka na wszystkich stronach
+- FAQ strona z 10 pytaniami, accordion i schema.org
+- Szczegóły projektów (lokalizacja, data, czas)
+- Szybki formularz mobilny (contact.html)
+- jQuery zaktualizowany do 3.7.1
+- Logo eager loading
+- Google Maps facade pattern
+- Preload krytycznych zasobów
+- DNS prefetch dla zewnętrznych CDN
+- Breadcrumbs (HTML + schema.org) na wszystkich podstronach
+- Structured data (Services, FAQPage, BreadcrumbList, Organization)
+- Meta descriptions z CTA i numerem telefonu
+- Sitemap z faq.html i aktualnymi datami
+- Google Tag Manager (kod dodany, wymaga konfiguracji)
+- Naprawione og:image URLs (offer.html, projects.html - brakowało rozszerzenia pliku)
+- Dodane og:site_name na wszystkich stronach
+- Dodane theme-color, robots i canonical do index.html (brakowało)
+- Naprawiony CSS: font-size base 62.5% (było 64.5%), usunięty duplikat text-shadow
+- Poprawiona dostępność formularzy (ukryte labele dla inputów placeholder-only)
+- Naprawiony modal w projects.html (usunięty role="button" z div)
+- Ujednolicony canonical URL na faq.html (/faq zamiast /faq.html)
+- Naprawiony og:image w contact.html (wskazywał na nieistniejący plik og/og-contact.jpg)
+- Naprawiony canonical URL w offer.html (/offers → /offer - literówka)
+- Usunięty duplikat tagu canonical w index.html
+- Usunięty duplikat preload carousel1.webp w index.html
+- Dodany skip-to-content link na index.html (brakowało, inne strony miały)
+- Dodany id="main" do <main> w contact.html, projects.html i index.html
+- Poprawione alt texty w projects.html (opisowe zamiast generycznych "Pierwsza realizacja")
+- Dodane aria-labels do przycisków "pokaż" w projects.html (dostępność)
+- Poprawiony alt logo w contact.html ("Logo MERC-KOP – Roboty Ziemne")
+- Poprawione literówki "Scieżka" → "Ścieżka" w projects.html
+- Dodana obsługa AJAX formularzy z komunikatami sukcesu/błędu (index, contact, offer)
+- Dodane style CSS dla feedbacku formularzy (.form-feedback, .success, .error)
+- Stan ładowania na przyciskach submit (spinner + blokada podwójnego kliknięcia)
+- Sitemap.xml zsynchronizowany z kanonicznymi URL (clean URLs bez .html)
+
+================================================================================
+
+AUTOR: Claude (Anthropic)
+DATA AKTUALIZACJI: 2026-01-31
+WERSJA: 4.0 - Pakiet poprawek: dostępność, SEO, walidacja formularzy, spójność
+
+================================================================================
+KONIEC PLANU
+================================================================================

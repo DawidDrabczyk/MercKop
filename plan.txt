@@ -9,42 +9,6 @@ zewnętrznych serwisów.
 
 ================================================================================
 
-## 1. OPTYMALIZACJA OBRAZÓW (KRYTYCZNE - WYMAGA RĘCZNEJ PRACY)
-================================================================================
-
-PROBLEM: Strona ładuje się wolno przez ogromne pliki graficzne.
-
-PLIKI DO OPTYMALIZACJI:
-
-| Plik                    | Obecny rozmiar | Docelowy rozmiar | Akcja                                 |
-|-------------------------|----------------|------------------|---------------------------------------|
-| img/koparka.png         | 2.5MB          | <80KB           | Zmniejsz do 1200px, WebP 80%          |
-| img/logo.png            | 1.5MB          | <30KB           | Zmniejsz do 300px, PNG-8 lub WebP     |
-| img/carousel1-3.webp    | 200-400KB      | <100KB          | Rekompresja WebP 75%                  |
-| img/aboutus1-4.jpg      | 300-600KB      | <120KB          | Zmniejsz + WebP                       |
-| img/projects1-6.jpg     | 200-400KB      | <100KB          | WebP 80%                              |
-
-NARZĘDZIA:
-- Squoosh.app - online, za darmo (ZALECANE)
-- TinyPNG - online
-
-KROK PO KROKU:
-1. Otwórz Squoosh.app w przeglądarce
-2. Przeciągnij obraz (np. koparka.png)
-3. Po prawej wybierz WebP, Quality 80%
-4. Zmień rozmiar: Resize → 1200px width (lub mniejszy dla logo)
-5. Porównaj (Original vs Compressed)
-6. Pobierz zoptymalizowany plik
-7. Zachowaj starą wersję jako backup
-8. Podmień plik w katalogu img/
-
-PRZEWIDYWANY EFEKT:
-- Całkowity rozmiar strony: z 5MB → <600KB (80%+ poprawa!)
-- Czas ładowania: z 8-12s → <2s
-- PageSpeed Score: z ~40 → 90+
-
-================================================================================
-
 ## 2. KONFIGURACJA FORMSPREE (WYMAGA REJESTRACJI)
 ================================================================================
 
@@ -112,60 +76,4 @@ Po wdrożeniu powyższych zmian, wykonaj testy:
 [ ] WhatsApp - otwiera rozmowę z poprawnym numerem
 [ ] Mapa Google - ładuje się po kliknięciu
 
-================================================================================
-
-## CO ZOSTAŁO JUŻ WDROŻONE (podsumowanie)
-================================================================================
-
-- Formularze kontaktowe (contact.html, index.html) + widget "Oddzwonimy"
-- Ujednolicone numery telefonu (główny + komórkowy)
-- Przycisk CTA widoczny na desktop
-- Floating CTA button na wszystkich stronach
-- WhatsApp integracja
-- Sekcja statystyk (150+ klientów, 200+ projektów, 3+ lat, 98%)
-- Opinie z datami i gwiazdkami
-- Rozbudowana stopka na wszystkich stronach
-- FAQ strona z 10 pytaniami, accordion i schema.org
-- Szczegóły projektów (lokalizacja, data, czas)
-- Szybki formularz mobilny (contact.html)
-- jQuery zaktualizowany do 3.7.1
-- Logo eager loading
-- Google Maps facade pattern
-- Preload krytycznych zasobów
-- DNS prefetch dla zewnętrznych CDN
-- Breadcrumbs (HTML + schema.org) na wszystkich podstronach
-- Structured data (Services, FAQPage, BreadcrumbList, Organization)
-- Meta descriptions z CTA i numerem telefonu
-- Sitemap z faq.html i aktualnymi datami
-- Google Tag Manager (kod dodany, wymaga konfiguracji)
-- Naprawione og:image URLs (offer.html, projects.html - brakowało rozszerzenia pliku)
-- Dodane og:site_name na wszystkich stronach
-- Dodane theme-color, robots i canonical do index.html (brakowało)
-- Naprawiony CSS: font-size base 62.5% (było 64.5%), usunięty duplikat text-shadow
-- Poprawiona dostępność formularzy (ukryte labele dla inputów placeholder-only)
-- Naprawiony modal w projects.html (usunięty role="button" z div)
-- Ujednolicony canonical URL na faq.html (/faq zamiast /faq.html)
-- Naprawiony og:image w contact.html (wskazywał na nieistniejący plik og/og-contact.jpg)
-- Naprawiony canonical URL w offer.html (/offers → /offer - literówka)
-- Usunięty duplikat tagu canonical w index.html
-- Usunięty duplikat preload carousel1.webp w index.html
-- Dodany skip-to-content link na index.html (brakowało, inne strony miały)
-- Dodany id="main" do <main> w contact.html, projects.html i index.html
-- Poprawione alt texty w projects.html (opisowe zamiast generycznych "Pierwsza realizacja")
-- Dodane aria-labels do przycisków "pokaż" w projects.html (dostępność)
-- Poprawiony alt logo w contact.html ("Logo MERC-KOP – Roboty Ziemne")
-- Poprawione literówki "Scieżka" → "Ścieżka" w projects.html
-- Dodana obsługa AJAX formularzy z komunikatami sukcesu/błędu (index, contact, offer)
-- Dodane style CSS dla feedbacku formularzy (.form-feedback, .success, .error)
-- Stan ładowania na przyciskach submit (spinner + blokada podwójnego kliknięcia)
-- Sitemap.xml zsynchronizowany z kanonicznymi URL (clean URLs bez .html)
-
-================================================================================
-
-AUTOR: Claude (Anthropic)
-DATA AKTUALIZACJI: 2026-01-31
-WERSJA: 4.0 - Pakiet poprawek: dostępność, SEO, walidacja formularzy, spójność
-
-================================================================================
-KONIEC PLANU
-================================================================================
+======================================================
